@@ -1,0 +1,43 @@
+// create a variable to hold your NFT's
+const nft = [];
+
+// this function will take in some values as parameters, create an
+// NFT object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function mintNFT(name,description,creator,blockChainNetwork,date) {
+    const obj = {
+        name,
+        description,
+        creator,
+        blockChainNetwork,
+        date
+    }
+
+    nft.push(obj)
+}
+
+// create a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs(arr) {
+    const array = arr
+    for(let i = 0 ; i < array.length ; i++){
+        console.log(array[i])
+    }
+}
+
+// print the total number of NFTs we have minted to the console
+function getTotalSupply (arr) {
+    return arr.length
+}
+
+// call your functions below this line
+mintNFT("ISHAN THAKRAL", "A series of surreal dreamscapes inspired by the stars .", "MarY Johnson", "JACOB", "January 16st, 2016")
+mintNFT("PIXOL", "A collection of cute and quirky .", "Jake Davis", "Binance Smart Chain", "February 1th, 20014")
+mintNFT("KUBEDR", "A collection of powerful mythological OF CRYPTO AND STOCKS.", "KALPAN ji", "crypto", "March 17th, 2012")
+mintNFT("riya", "a series of travel at kedarnath and somnath", "himanshu", "Solana", "April 12nd, 2022")
+
+
+
+listNFTs(nft)
+
+console.log(getTotalSupply(nft))
